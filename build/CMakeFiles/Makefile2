@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josep/robotics/AdasSourrondView
+CMAKE_SOURCE_DIR = /home/cirtesu/SourrondViewC-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josep/robotics/AdasSourrondView/build
+CMAKE_BINARY_DIR = /home/cirtesu/SourrondViewC-/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/josep/robotics/AdasSourrondView/build
 all: CMakeFiles/avm_cali.dir/all
 all: CMakeFiles/avm_app.dir/all
 all: CMakeFiles/surround_view_live.dir/all
+all: CMakeFiles/surround_view_ros.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,10 +74,65 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/uninstall.dir/clean
+clean: CMakeFiles/avm_app_uninstall.dir/clean
 clean: CMakeFiles/avm_cali.dir/clean
 clean: CMakeFiles/avm_app.dir/clean
 clean: CMakeFiles/surround_view_live.dir/clean
+clean: CMakeFiles/surround_view_ros.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/uninstall.dir
+
+# All Build rule for target.
+CMakeFiles/uninstall.dir/all: CMakeFiles/avm_app_uninstall.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cirtesu/SourrondViewC-/build/CMakeFiles --progress-num= "Built target uninstall"
+.PHONY : CMakeFiles/uninstall.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/uninstall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
+.PHONY : CMakeFiles/uninstall.dir/rule
+
+# Convenience name for target.
+uninstall: CMakeFiles/uninstall.dir/rule
+.PHONY : uninstall
+
+# clean rule for target.
+CMakeFiles/uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/clean
+.PHONY : CMakeFiles/uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/avm_app_uninstall.dir
+
+# All Build rule for target.
+CMakeFiles/avm_app_uninstall.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app_uninstall.dir/build.make CMakeFiles/avm_app_uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app_uninstall.dir/build.make CMakeFiles/avm_app_uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cirtesu/SourrondViewC-/build/CMakeFiles --progress-num= "Built target avm_app_uninstall"
+.PHONY : CMakeFiles/avm_app_uninstall.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/avm_app_uninstall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/avm_app_uninstall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
+.PHONY : CMakeFiles/avm_app_uninstall.dir/rule
+
+# Convenience name for target.
+avm_app_uninstall: CMakeFiles/avm_app_uninstall.dir/rule
+.PHONY : avm_app_uninstall
+
+# clean rule for target.
+CMakeFiles/avm_app_uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app_uninstall.dir/build.make CMakeFiles/avm_app_uninstall.dir/clean
+.PHONY : CMakeFiles/avm_app_uninstall.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/avm_cali.dir
@@ -85,14 +141,14 @@ clean: CMakeFiles/surround_view_live.dir/clean
 CMakeFiles/avm_cali.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_cali.dir/build.make CMakeFiles/avm_cali.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_cali.dir/build.make CMakeFiles/avm_cali.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/josep/robotics/AdasSourrondView/build/CMakeFiles --progress-num=4,5,6 "Built target avm_cali"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cirtesu/SourrondViewC-/build/CMakeFiles --progress-num=4,5,6 "Built target avm_cali"
 .PHONY : CMakeFiles/avm_cali.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/avm_cali.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/avm_cali.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
 .PHONY : CMakeFiles/avm_cali.dir/rule
 
 # Convenience name for target.
@@ -111,14 +167,14 @@ CMakeFiles/avm_cali.dir/clean:
 CMakeFiles/avm_app.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app.dir/build.make CMakeFiles/avm_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app.dir/build.make CMakeFiles/avm_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/josep/robotics/AdasSourrondView/build/CMakeFiles --progress-num=1,2,3 "Built target avm_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cirtesu/SourrondViewC-/build/CMakeFiles --progress-num=1,2,3 "Built target avm_app"
 .PHONY : CMakeFiles/avm_app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/avm_app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/avm_app.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
 .PHONY : CMakeFiles/avm_app.dir/rule
 
 # Convenience name for target.
@@ -137,14 +193,14 @@ CMakeFiles/avm_app.dir/clean:
 CMakeFiles/surround_view_live.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/josep/robotics/AdasSourrondView/build/CMakeFiles --progress-num=7,8,9 "Built target surround_view_live"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cirtesu/SourrondViewC-/build/CMakeFiles --progress-num=7,8,9 "Built target surround_view_live"
 .PHONY : CMakeFiles/surround_view_live.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/surround_view_live.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/surround_view_live.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
 .PHONY : CMakeFiles/surround_view_live.dir/rule
 
 # Convenience name for target.
@@ -155,6 +211,32 @@ surround_view_live: CMakeFiles/surround_view_live.dir/rule
 CMakeFiles/surround_view_live.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/clean
 .PHONY : CMakeFiles/surround_view_live.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/surround_view_ros.dir
+
+# All Build rule for target.
+CMakeFiles/surround_view_ros.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cirtesu/SourrondViewC-/build/CMakeFiles --progress-num=10,11,12 "Built target surround_view_ros"
+.PHONY : CMakeFiles/surround_view_ros.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/surround_view_ros.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/surround_view_ros.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
+.PHONY : CMakeFiles/surround_view_ros.dir/rule
+
+# Convenience name for target.
+surround_view_ros: CMakeFiles/surround_view_ros.dir/rule
+.PHONY : surround_view_ros
+
+# clean rule for target.
+CMakeFiles/surround_view_ros.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/clean
+.PHONY : CMakeFiles/surround_view_ros.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

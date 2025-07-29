@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josep/robotics/AdasSourrondView
+CMAKE_SOURCE_DIR = /home/cirtesu/SourrondViewC-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josep/robotics/AdasSourrondView/build
+CMAKE_BINARY_DIR = /home/cirtesu/SourrondViewC-/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -87,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles /home/josep/robotics/AdasSourrondView/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles /home/cirtesu/SourrondViewC-/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josep/robotics/AdasSourrondView/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirtesu/SourrondViewC-/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -115,6 +125,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named avm_app_uninstall
+
+# Build rule for target.
+avm_app_uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 avm_app_uninstall
+.PHONY : avm_app_uninstall
+
+# fast build rule for target.
+avm_app_uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app_uninstall.dir/build.make CMakeFiles/avm_app_uninstall.dir/build
+.PHONY : avm_app_uninstall/fast
 
 #=============================================================================
 # Target rules for targets named avm_cali
@@ -154,6 +190,19 @@ surround_view_live: cmake_check_build_system
 surround_view_live/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/build
 .PHONY : surround_view_live/fast
+
+#=============================================================================
+# Target rules for targets named surround_view_ros
+
+# Build rule for target.
+surround_view_ros: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 surround_view_ros
+.PHONY : surround_view_ros
+
+# fast build rule for target.
+surround_view_ros/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/build
+.PHONY : surround_view_ros/fast
 
 avm_app_demo.o: avm_app_demo.cpp.o
 .PHONY : avm_app_demo.o
@@ -211,6 +260,7 @@ srcs/common.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_cali.dir/build.make CMakeFiles/avm_cali.dir/srcs/common.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app.dir/build.make CMakeFiles/avm_app.dir/srcs/common.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/srcs/common.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/srcs/common.cpp.o
 .PHONY : srcs/common.cpp.o
 
 srcs/common.i: srcs/common.cpp.i
@@ -221,6 +271,7 @@ srcs/common.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_cali.dir/build.make CMakeFiles/avm_cali.dir/srcs/common.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app.dir/build.make CMakeFiles/avm_app.dir/srcs/common.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/srcs/common.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/srcs/common.cpp.i
 .PHONY : srcs/common.cpp.i
 
 srcs/common.s: srcs/common.cpp.s
@@ -231,6 +282,7 @@ srcs/common.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_cali.dir/build.make CMakeFiles/avm_cali.dir/srcs/common.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/avm_app.dir/build.make CMakeFiles/avm_app.dir/srcs/common.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/srcs/common.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/srcs/common.cpp.s
 .PHONY : srcs/common.cpp.s
 
 surround_view_live.o: surround_view_live.cpp.o
@@ -257,6 +309,30 @@ surround_view_live.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_live.dir/build.make CMakeFiles/surround_view_live.dir/surround_view_live.cpp.s
 .PHONY : surround_view_live.cpp.s
 
+surround_view_ros.o: surround_view_ros.cpp.o
+.PHONY : surround_view_ros.o
+
+# target to build an object file
+surround_view_ros.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/surround_view_ros.cpp.o
+.PHONY : surround_view_ros.cpp.o
+
+surround_view_ros.i: surround_view_ros.cpp.i
+.PHONY : surround_view_ros.i
+
+# target to preprocess a source file
+surround_view_ros.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/surround_view_ros.cpp.i
+.PHONY : surround_view_ros.cpp.i
+
+surround_view_ros.s: surround_view_ros.cpp.s
+.PHONY : surround_view_ros.s
+
+# target to generate assembly for a file
+surround_view_ros.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/surround_view_ros.dir/build.make CMakeFiles/surround_view_ros.dir/surround_view_ros.cpp.s
+.PHONY : surround_view_ros.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -265,9 +341,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... avm_app_uninstall"
+	@echo "... uninstall"
 	@echo "... avm_app"
 	@echo "... avm_cali"
 	@echo "... surround_view_live"
+	@echo "... surround_view_ros"
 	@echo "... avm_app_demo.o"
 	@echo "... avm_app_demo.i"
 	@echo "... avm_app_demo.s"
@@ -280,6 +360,9 @@ help:
 	@echo "... surround_view_live.o"
 	@echo "... surround_view_live.i"
 	@echo "... surround_view_live.s"
+	@echo "... surround_view_ros.o"
+	@echo "... surround_view_ros.i"
+	@echo "... surround_view_ros.s"
 .PHONY : help
 
 

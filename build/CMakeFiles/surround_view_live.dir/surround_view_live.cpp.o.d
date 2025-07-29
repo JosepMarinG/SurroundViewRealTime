@@ -1,8 +1,7 @@
 CMakeFiles/surround_view_live.dir/surround_view_live.cpp.o: \
- /home/josep/robotics/AdasSourrondView/surround_view_live.cpp \
- /usr/include/stdc-predef.h \
- /home/josep/robotics/AdasSourrondView/./srcs/common.h \
- /home/josep/robotics/AdasSourrondView/./srcs/prms.hpp \
+ /home/cirtesu/SourrondViewC-/surround_view_live.cpp \
+ /usr/include/stdc-predef.h /home/cirtesu/SourrondViewC-/./srcs/common.h \
+ /home/cirtesu/SourrondViewC-/./srcs/prms.hpp \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

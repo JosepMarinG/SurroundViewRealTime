@@ -1,10 +1,3 @@
-/***
- * function: 360 surrond view combine c++ demo
- * author: joker.mao
- * date: 2023/07/15
- * copyright: ADAS_EYES all right reserved
-*/
-
 #include "common.h"
 #include <opencv2/videoio.hpp>
 
@@ -73,7 +66,7 @@ int main(int argc, char** argv)
         }
     }
     cv::VideoCapture cams[4];
-    int cam_ids[4] = {2, 6, 4, 0};  // Ajusta según tus dispositivos
+    int cam_ids[4] = {2, 4, 6, 0};  // Ajusta según tus dispositivos
 
     for (int i = 0; i < 4; ++i) {
         cams[i].open(cam_ids[i]);
@@ -81,8 +74,8 @@ int main(int argc, char** argv)
             std::cerr << "Cannot open camera " << cam_ids[i] << std::endl;
             return -1;
         }
-        cams[i].set(cv::CAP_PROP_FRAME_WIDTH, 1280);
-        cams[i].set(cv::CAP_PROP_FRAME_HEIGHT, 720);
+        cams[i].set(cv::CAP_PROP_FRAME_WIDTH,1920); //1920x1080 //640x480
+        cams[i].set(cv::CAP_PROP_FRAME_HEIGHT, 1080);
     }
 
     while (true) {
